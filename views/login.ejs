@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='./css/auth.css'/> 
+</head>
+<body>
+    <div class="regis-wrapper">
+        <div class="left">
+          
+        </div>
+        <div class="right">
+            <div class="form-container">
+                <div class="title">
+                    <h1>Sign In</h1>
+                </div>
+                <form action="/login" method="post">
+                  <div class="form-floating mb-3">
+                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
+                    <label for="floatingInput">username</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" name="password" class="form-control" id="floatingInput" placeholder="password">
+                    <label for="floatingInput">password</label>
+                  </div>
+                    <div class="form-item form-button">
+                        <button type="submit" class="btn-submit">Sign In</button>
+                        <p>Don't have an account?<a href="/register" >Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

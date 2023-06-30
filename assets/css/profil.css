@@ -1,0 +1,60 @@
+.container-profil{
+  width: 100%;
+  display:flex;
+  gap:30px;
+}
+
+.wrapper-profil{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding:40px;
+  width:60%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  border-radius:3px;
+}
+.wrapper-password{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding:40px;
+  width:40%;
+  border-radius:3px;
+}
+
+.wrapper-profil form{
+  padding:40px;
+  width:100%;
+}
+
+.sign-img img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  margin-left:40px;
+}
+
+.btn-submit-profil{
+  padding:5px 15px;
+  background: #D78989;
+  border-radius: 3px;
+  color:#ffffff;
+  text-decoration: none;
+  transition:.3s;
+  border:0;
+}
+/* .btn-reset{
+  padding:5px 15px;
+  background: #cacaca;
+  border-radius: 3px;
+  color:#252525;
+  text-decoration: none;
+  transition:.3s;
+  border:0;
+} */
+
+.btn-submit-profil:hover{
+  background-color: #aa6c6c;
+}
+/* .btn-reset:hover{
+  background-color: #6d6c6c;
+} */

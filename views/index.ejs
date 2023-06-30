@@ -1,0 +1,49 @@
+<nav>
+  <div class="navbar-account">
+    <div class="left">
+      <a class="logout" href="/logout">Logout</a>
+    </div>
+    <div class="right">
+      <a href="/profil">
+        <img class="navbar-profil-picture" src="./img/pp.png" alt="profil">
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="welcome-wrapper">
+  <h1 class="welcome">Welcome to SIgnIng</h1>
+  <p>Please select the activity you want to do^_^</p>
+</div>
+<div class="info-dashboard-wrapper">
+  <div class="item">
+    <span>
+      <% let totalUsers = 0; %>
+      <% allUsers.forEach(function(user) { %>
+          <% totalUsers++; %>
+      <% }); %>
+      <%= totalUsers %>
+    </span>
+    <span>Users</span>
+  </div>
+  <div class="item">
+    <span>
+      <% let totalDocuments = 0; %>
+      <% allDocuments.forEach(function(document) { %>
+          <% totalDocuments++; %>
+      <% }); %>
+      <%= totalDocuments %>
+    </span>
+    <span>Uploaded Doc</span>
+  </div>
+  <div class="item">
+    <span>
+      <% let totalReq = 0; %>
+      <% allReq.forEach(function(req) { %>
+          <% totalReq++; %>
+      <% }); %>
+      <%= totalReq %>
+    </span>
+    <span>Request</span>
+  </div>
+</div>
+

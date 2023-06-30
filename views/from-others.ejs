@@ -1,0 +1,34 @@
+<nav>
+  <div class="navbar-account"> 
+    <div class="left">
+      <a class="logout" href="/logout">Logout</a>
+    </div>
+    <div class="right">
+      <a href="/profil">
+        <img class="navbar-profil-picture" src="./img/pp.png" alt="profil">
+      </a>
+    </div>
+  </div>
+</nav>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Last Change</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% documents.forEach(document => { %>
+      <tr>
+        <td><%= document.name %></td>
+        <td>Request</td>
+        <td><%= moment(document.created_at).format('LL') %></td>
+        <td>
+          <a href="/download/<%= document.document_id %>" class="btn-detail">Download</a>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>

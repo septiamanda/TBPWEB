@@ -1,0 +1,55 @@
+<nav>
+  <div class="navbar-account">
+    <div class="left">
+      <a class="logout" href="/logout">Logout</a>
+    </div>
+    <div class="right">
+      <a href="/profil">
+        <img class="navbar-profil-picture" src="./img/pp.png" alt="profil">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <form class="form-upload"action="/add-request" method="post" enctype="multipart/form-data">
+    <div class="mb-3 outlier-file-drop">
+      <div class="file-drop">
+        <input type="file" name="filename" id="file-input" multiple>
+        <label for="file-input" class="file-label">
+          <span><i class="bi bi-cloud-upload"></i></span>
+          <span>Click to Upload</span> 
+        </label>
+      </div>
+    </div>
+    
+    <div class="wrapper-penerima">
+      <div class="mb-3">
+        <label for="name" class="form-label">To user</label>
+        <select name="user_id" class="form-control" id="selectUser">
+          <option value="">Choose User...</option>
+          <% users.forEach(function(user) { %>
+            <option value="<%= user.user_id %>"><%= user.username %></option>
+          <% }); %>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="dokumen" class="form-label">Document Name</label>
+        <input type="text" class="form-control input" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea type="text" class="form-control input" id="description" name="description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="jabatan" class="form-label">Position</label>
+        <input type="text" class="form-control input" id="jabatan" name="jabatan" required>
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <input type="text" class="form-control input" id="status" name="status" required>
+      </div>
+    </div>
+    <button type="submit" class="btn-submit mt-3">Add Recipients</button>
+  </form>
+</div>

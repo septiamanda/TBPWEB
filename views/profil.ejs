@@ -1,0 +1,62 @@
+<nav>
+  <div class="navbar-account">
+    <div class="left">
+      <a class="logout" href="/logout">Logout</a>
+    </div>
+    <div class="right">
+      <a href="/profil">
+        <img class="navbar-profil-picture" src="./img/pp.png" alt="profil">
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="container-profil">
+  <div class="wrapper-profil">
+    <div class="sign-img">
+      <% if (user.sign_img) { %>
+        <img src="./img/<%= user.sign_img %>"> 
+      <% } else { %>
+        <img src="./img/sign.png"  >
+      <% } %>
+    </div>
+    <form action="/update-profil" method="post" enctype="multipart/form-data">
+    <div class="row mb-3">
+      <label for="username" class="col-sm-4 col-form-label">Your Name</label>
+      <div class="col">
+          <input type="text" id="disabledTextInput" class="form-control" value="<%= user.username %>" readonly>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-4 col-form-label">Email</label>
+      <div class="col">
+        <input type="email" name="email" class="form-control" id="email" value="<%= user.email %>">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="sign" class="col-sm-4 col-form-label">Your Sign</label>
+      <div class="col">
+        <input type="file" name="sign_img" class="form-control" id="sign">
+      </div>
+    </div>
+    <button type="submit" class="btn-submit-profil">Save</button>
+  </form>
+  </div>
+  <div class="wrapper-password">
+    <form action="/change-password" method="post">
+      <div class="row mb-3">
+        <label for="Password" class="col-sm-4 col-form-label">Password</label>
+        <div class="col">
+          <input type="password" name="password" class="form-control" id="Password">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="Password" class="col-sm-4 col-form-label">New Password</label>
+        <div class="col">
+          <input type="password" name="newPassword" class="form-control" id="Password">
+        </div>
+      </div>
+      <button type="submit" class="mt-3 btn-submit-profil">Change</button>
+      <!-- <button type="button" class="btn-reset">Reset</button> -->
+    </form>
+  </div>
+</div>

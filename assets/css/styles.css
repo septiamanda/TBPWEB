@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family:'poppins'; */
+}
+
+/* :root{
+  --primary-100:#FFC2C5;
+  --primary-200:#e0a5a8;
+  --primary-300:#996367;
+  --accent-100:#FF8B8E;
+  --accent-200:#942c37;
+  --text-100:#4D4D4D;
+  --text-200:#797979;
+  --bg-100:#FCEFF0;
+  --bg-200:#f2e5e6;
+  --bg-300:#c9bdbe;
+} */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+section{
+    display: grid;
+    grid-template-areas: 
+    "aside main main"
+    "aside main main";
+    grid-template-columns:200px 1fr;
+}
+
+.container-main{
+  width: 100%;
+  height:100vh;
+  padding:50px;
+  padding-bottom:1050px;
+  background:#FCEFF0;
+}
+
+aside {
+  grid-area:aside;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* box-shadow: #34495e 0px 1px 1px, #34495e 0px 1px 1px; */
+  position: relative;
+  transition:.2s ;
+  z-index: 10;
+  background:#FCEFF0;
+}
+
+
+aside .menu {
+  padding:10px;
+  width: 100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: start;
+  align-items: start;
+  margin:15px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius:20px;
+}
+aside .menu-MoU{
+  box-shadow:none;
+  border-radius:0;
+  background-color: #858282;
+  margin:0;
+  margin-top:1px;
+}
+
+aside .menu a {
+  width:100%;
+  display:flex;
+  justify-content:start;
+  align-items:center;
+  color: #4D4D4D;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "poppins";
+  padding:15px 15px 15px 14px;
+}
+
+aside .menu a:hover{
+  color: #FF8B8E;
+}
+
+aside .menu a span i{
+  font-size:20px;
+}
+
+aside .menu a span .bi-circle{
+    font-size:11px;
+}
+
+aside .menu a span .bi-circle-fill{
+  font-size:10px;
+  color:#FFCA00;
+}
+
+aside .menu a span{
+  margin-bottom:0;
+  margin-left:11px;
+}
+
+aside .menu .accordion-button{
+  width:100%;
+  margin-left:27px;
+  margin-top: 22px;
+  display:flex;
+  gap:14px;
+}
+.accor-body{
+  margin-left:15px;
+}
+.link-accor{
+  font-size:12px;
+  color:#FF8B8E;
+  transition:.2s;
+}
+.link-accor:hover{
+  color:#9d5658;
+}
+
+.company-name{
+  width: 100%;
+  height:94px;
+  background:#FF8B8E;
+}
+
+.logo-MoU{
+  width: 100%;
+  height:90px;
+  background:#FF8B8E;
+}
+
+
+.company-name a{
+  text-decoration: none;
+  margin:0;
+  width:100%;
+  height:100%;
+  font-family: 'Adamina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+.logout{
+  text-decoration: none;
+  color:#fff;
+  font-weight:600;
+  transition:.2s;
+}
+
+.logout:hover{
+  color:#efd6d6;
+}
+.bi-trash{
+  font-size:20px;
+  color:rgb(232, 76, 76);
+  margin-left:20px;
+}
+
+
+
+
+
+
+
+
