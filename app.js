@@ -240,7 +240,7 @@ app.get('/download/:document_id', requireAuth, (req, res) => {
 // =================================================================
 
 app.post('/register', function (req, res) {
-  const { username, password, confirm_password } = req.body;
+  const { email, username, password, confirm_password } = req.body;
 
   // check if username already exists
   const sqlCheck = 'SELECT * FROM users WHERE username = ?';
@@ -264,8 +264,8 @@ app.post('/register', function (req, res) {
       if (err) throw err;
 
       // insert user to database
-      const sqlInsert = 'INSERT INTO users (username, password) VALUES (?, ?)';
-      const values = [username, hash];
+      const sqlInsert = 'INSERT INTO users (email, username, password) VALUES (?, ?, ?)';
+      const values = [email, username, hash];
       db.query(sqlInsert, values, (err, result) => {
         if (err) throw err;
         console.log({ message: 'Registrasi berhasil', values });
